@@ -4,17 +4,12 @@ import Email from './Email';
 
 function Footer() {
   return (
-    <div className='sm:p-1 mt-2 pb-2 mb-[1px] flex flex-col w-full border-t-2 bg-[#ffff] position-fixed sticky bottom-0'>
-        <div className='flex flex-row justify-center pt-2'>
-            <Link className='p-2 mx-2 hover:text-[#007aff] duration-200 font-bold'>Email</Link>
-            <Link className='p-2 mx-2 bg-[#007aff] text-white rounded-lg hover:bg-[#ffff] hover:text-[#007aff] hover:outline duration-200 font-bold'>Hire Me</Link>
-            <Link className='p-2 mx-2 hover:text-[#007aff] duration-200 font-bold'>Resumé</Link>
-            {/* <Link className='outline p-2 mx-2 rounded-lg bg-[#ffc900] font-marbyProReg hover:bg-[#90A8ED] hover:-translate-x-1 hover:-translate-y-1 duration-200 hover:border-r-2 hover:border-b-2 hover:border-black'>Resumé</Link> */}
-        </div>
-        {/* <div className='flex flex-col text-center pt-1'>
-            <p className='font-marbyProBold text-lg'>Designed and Made by Anirudh Bukka</p>
-            <p className='font-marbyProReg'>Using React JS, Tailwind CSS, MongoDB, Node & Express</p>
-        </div> */}
+    <div className='sm:p-1 pb-2 mb-[1px] w-full bg-[#FAFAFA] lg:max-w-full mt-[1px] flex flex-row justify-around lg:max-h-32 lg:min-h-32 z-50 bg-opacity-90'>
+      <div className='my-auto font-sans text-2xl'>Anirudh</div>
+      <div className='flex pt-2 flex-col justify-around text-center'>
+          <div className='font-sans text-lg'>anirudh4dev@gmail.com</div>
+          <a className='font-sans text-lg' href='https://drive.google.com/file/d/1RkC3HWOec7pV6iO7NoHF1lM6xxOQSVh5/view?usp=sharing'>Resumé</a>
+      </div>
     </div>
   )
 }

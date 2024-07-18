@@ -1,12 +1,15 @@
 import React from 'react';
 import BlogPageComponent from '../components/BlogPageComponent';
+import HeaderImg from '../assets/pictures/purple-cropped.png';
 
 function Blog() {
   return (
+    <div>
+      <img src={HeaderImg} alt="Background" className=""/>
     <div className='flex flex-col'>
-      <p className='text-5xl font-bold text-center my-3 text-[#007aff]'>Blog</p>
       <BlogPageComponent />
     </div>
+  </div>
   )
 }
 

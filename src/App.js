@@ -13,8 +13,8 @@ import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader';
 function App() {
 
   return (
-    <div className="">
-      <Navbar />
+    <div className="flex flex-col justify-between">
+      <Navbar className="h-full w-full" />
       <div className="w-full">
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -23,7 +23,7 @@ function App() {
           <Route path="/about" element={<About />} />
         </Routes>
       </div>
-      <Footer />
+      <Footer className="h-full w-full" />
     </div>
   );
 }

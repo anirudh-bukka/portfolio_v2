@@ -4,6 +4,10 @@ import HomePage from '../pages/HomePage';
 import Projects from '../pages/Projects';
 import About from '../pages/About';
 import Blog from '../pages/Blog';
+import Instagram from '../assets/logos/instagram.svg';
+import Discord from '../assets/logos/discord.svg';
+import LinkedIn from '../assets/logos/linkedin.svg';
+import GitHub from '../assets/logos/github.svg';
 
 
 import { useState } from "react"; // import state
@@ -13,13 +17,13 @@ export default function Header() {
 
   return (
     <div className="lg:max-w-full p-1 mt-[1px] flex flex-row justify-between lg:max-h-32 lg:min-h-32 z-50 bg-white bg-opacity-90 sticky top-0">
-      <div className="lg:ml-32 lg:mt-8 lg:mb-8 h-max">
-        <Link to="/" className='font-sans text-5xl'>Anirudh</Link>
+      <div className="lg:ml-64 lg:mt-8 lg:mb-8 h-max max-sm:m-4">
+        <Link to="/" className='font-sans text-3xl'>Anirudh</Link>
       </div>
       <div>
-        <section className="MOBILE-MENU flex lg:hidden ml-32 mt-4 h-max">
+        <section className="MOBILE-MENU flex lg:hidden max-sm:ml-32 h-max">
           <div
-            className="HAMBURGER-ICON space-y-2"
+            className="HAMBURGER-ICON space-y-2 max-sm:m-4"
             onClick={() => setIsNavOpen((prev) => !prev)} // toggle isNavOpen state on click
           >
             <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
@@ -47,23 +51,36 @@ export default function Header() {
             </div>
             <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
               <li className="border-b border-gray-400 my-8 uppercase">
-                <Link to="/projects" className='font-sans text-xl'>Projects</Link>
+                <Link to="/projects" className='font-sans text-lg'>Projects</Link>
               </li>
               <li className="border-b border-gray-400 my-8 uppercase">
-                <Link to="/blog" className='font-sans text-xl'>Blog</Link>
+                <Link to="/blog" className='font-sans text-lg'>Blog</Link>
               </li>
               <li className="border-b border-gray-400 my-8 uppercase">
-                <Link to="about" className='font-sans text-xl'>About</Link>
+                <Link to="about" className='font-sans text-lg'>About</Link>
+              </li>
+              <li className="border-b border-gray-400 my-8 uppercase">
+                <a href = 'https://www.linkedin.com/in/anirudh-bukka/'>LinkedIn</a>
+              </li>
+              <li className="border-b border-gray-400 my-8 uppercase">
+                <a href = 'https://discordapp.com/users/773880832405798942'>Discord</a>
+              </li>
+              <li className="border-b border-gray-400 my-8 uppercase">
+                <a href = 'https://github.com/anirudh-bukka'>GitHub</a>
               </li>
             </ul>
           </div>
         </section>
 
-        <ul className="DESKTOP-MENU space-x-8 lg:w-[30%] lg:mr-32 lg:mt-10 lg:mb-10 h-max max-sm:hidden flex text-center lg:flex-row justify-between">
+        <ul className="DESKTOP-MENU space-x-8 lg:w-[30%] lg:mr-48 lg:mt-10 lg:mb-10 h-max max-sm:hidden flex text-center lg:flex-row justify-between">
         {/* <div className="lg:w-[30%] border-2 lg:mr-32 lg:mt-10 lg:mb-10 h-max max-sm:hidden flex text-center lg:flex-row justify-between"> */}
-          <Link to="/projects" className='font-sans text-xl'>Projects</Link>
-          <Link to="/blog" className='font-sans text-xl'>Blog</Link>
-          <Link to="about" className='font-sans text-xl'>About</Link>
+          <Link to="/projects" className='font-sans text-lg hover:border-0 duration-200 hover:border-b-2 hover:border-black'>Projects</Link>
+          <Link to="/blog" className='font-sans text-lg hover:border-0 duration-200 hover:border-b-2 hover:border-black'>Blog</Link>
+          <Link to="about" className='font-sans text-lg hover:border-0 duration-200 hover:border-b-2 hover:border-black'>About</Link>
+          <a href = 'https://www.linkedin.com/in/anirudh-bukka/'><img src={LinkedIn} alt="LinkedIn" className="mx-[8px] p-0 lg:h-8 lg:w-8 hover:border-0 duration-200 hover:border-b-2 hover:border-black"/></a>
+          <a href = 'https://discordapp.com/users/773880832405798942'><img src={Discord} alt="Discord" className="mx-[10px] p-0 lg:h-8 lg:w-8 hover:border-0 duration-200 hover:border-b-2 hover:border-black"/></a>
+          <a href = 'https://github.com/anirudh-bukka'><img src={GitHub} alt="GitHub" className="mx-[10px] p-0 lg:h-8 lg:w-8 hover:border-0 duration-200 hover:border-b-2 hover:border-black"/></a>
+          {/* <a href = 'https://www.instagram.com/anidude09/'><img src={Instagram} alt="Instagram" className="mx-[10px] p-0 lg:h-8 lg:w-8"/></a> */}
          {/* <Link to="about" className='bg-white hover:bg-[#23a094] hover:text-white lg:max-h-12 hover:outline-black p-2 rounded-lg hover:-translate-x-1 hover:-translate-y-1 duration-200 hover:border-r-4 hover:border-b-4 hover:border-black'>{<About />}</Link> */}
         </ul>
       </div>
