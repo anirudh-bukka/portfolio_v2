@@ -10,6 +10,7 @@ import Twitter from '../assets/logos/twitter.svg';
 import LinkedIn from '../assets/logos/linkedin.svg';
 import HeaderImg from '../assets/pictures/about-headerimg.png';
 import Efcct1 from '../assets/pictures/efcct1.png';
+import ExperienceCard from '../components/ExperienceCard.jsx'
 
 import { Link } from 'react-router-dom';
 
@@ -22,7 +23,29 @@ function About() {
           <p className='text-xl p-3 my-4 mx-auto text-justify max-sm:w-[90%] lg:w-[70%]'>I am currently a software engineer working on automation scripting for end-to-end feature implementation and enhancing overall quality of the application. I am a B.Tech graduate in Information Technology from Vallurupalli Nageswara Rao Vignana Jyothi Institute of Engineering & Technology, Hyderabad, India.
   I am always open to network be it work or music. I have a deep interest in Data Science and Web Development and  try to contribute to open source projects. </p>
         </div>
-        <div className='my-4 flex flex-col lg:flex-row max-sm:w-[90%] lg:w-[70%] mx-auto justify-around'>
+
+        {/* <div className='flex flex-col mx-auto max-sm:w-[90%] lg:w-[70%] border-2'>
+          <div className='text-4xl border-2 p-3 my-4 mx-auto'>Experience</div>
+          <div className='border-2 flex flex-row'>
+            <div className='border-2 max-sm:w-[20%] lg:w-[10%]'>Logo</div>
+            <div className='border-2 max-sm:w-[80%] lg:w-[90%] lg:ml-8'>
+              <div className='border-2 flex flex-row'>
+                <div>Company Name</div>
+                <div>Start-End</div>
+              </div>
+              <div className='border-2'>Role</div>
+              <div className='border-2'>Description</div>
+            </div>
+          </div>
+        </div> */}
+        <hr className='max-sm:w-[90%] lg:w-[70%] mx-auto' />
+        <div className='flex flex-col mx-auto max-sm:w-[90%] lg:w-[60%]'>
+          <div className='text-4xl p-3 my-4 mx-auto'>Experience</div>
+            <ExperienceCard />
+        </div>
+        <hr className='max-sm:w-[90%] lg:w-[70%] mx-auto my-4' />
+
+        <div className='my-8 flex flex-col lg:flex-row max-sm:w-[90%] lg:w-[70%] mx-auto justify-around'>
           <div className='flex flex-col justify-between px-3 lg:w-[70%]'>
             <p className='text-xl mx-auto text-justify'>I co-founded a networking community in Discord, where people (mostly students) can come grow, have fun and share knowledge! <i>We are back to the drawing board to expand the purpose and experience and with one big suprise.</i></p>
             <Link to="https://www.linkedin.com/company/efcctcommunity/" className='border border-black p-4 max-sm:my-2 text-center'>EFCCT</Link>

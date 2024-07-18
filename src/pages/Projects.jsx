@@ -7,8 +7,8 @@ function Projects() {
     <div>
       <img src={HeaderImg} alt="Background" className=""/>
       <div className='flex flex-col'>
-        <p className='text-5xl  text-center my-3 text-black'>Projects</p>
-        {/* <ProjectPageComponent /> */}
+        {/* <p className='text-5xl  text-center my-3 text-black'>Projects</p> */}
+        <ProjectPageComponent />
       </div>
     </div>
   )
