@@ -24,10 +24,10 @@ function ProjectPageComponent() {
               <p className='lg:mb-4'><i>6 April 2024</i></p>
               <p className='lg:mb-4 font-bold text-white bg-black px-3'>Journal</p>
             </div>
-            <p className='mt-4 mb-8 text-lg text-justify'>This is a project based on Deep Capsule Neural Networks complemented by Pruning that classifies a fundus image into one of the seven stages of Diabetic Retinopathy - a leading cause of blindess among patients with chronic diabetes. Our model successfully classifies the input images with a high accuracy of more than 98% even with minimal training without stressing resources such as GPUs and TPUs.</p>
+            <p className='mt-4 mb-8 text-lg text-justify'>This is a project based on Deep Capsule Neural Networks complemented by Pruning that classifies a fundus image into one of the seven stages of Diabetic Retinopathy - a leading cause of blindess among patients with chronic diabetes. Our model successfully classifies the input images with a high accuracy of more than 98% even with minimal training without stressing resources such as GPUs and TPUs. Key features of this method is we have redesigned the routing method called "Routing with Attention" to get prevent unnecessary connections being made between different neurons and capsules. To further prevent overfitting and underfitting which can arise from the dropout layer during training, pruning by weight and pruning by nodes has been implemented.</p>
             <a href='./projects' className='border lg:w-fit text-center border-black p-4 hover:bg-black hover:text-white hover:duration-200'>Under Review</a>
           </div>
-          <div className='flex flex-col max-sm:hidden lg:w-[40%] justify-between'>
+          <div className='flex flex-col max-sm:hidden lg:w-[40%] justify-evenly'>
             <img src={CapsNet} className="  max-sm:hidden" alt="Preview"/>
             <img src={CapsNet2} className="  max-sm:hidden" alt="Preview"/>
           </div>
