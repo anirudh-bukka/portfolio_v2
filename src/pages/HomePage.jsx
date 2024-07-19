@@ -23,8 +23,8 @@ function HomePage() {
         <div className='flex flex-col justify-evenly'>
             <img src={room1} className='py-1' alt="Room" />
             <div className='flex lg:flex-row max-sm:flex-col'>
-                <img src={manali} className='lg:w-[50%] lg:h-[50%] lg:pr-1 py-1' alt="Manali" />
-                <img src={shimla} className='lg:w-[50%] lg:h-[50%] lg:pl-1 py-1' alt="Shimla" />
+                <img src={manali} className='lg:w-[50%] lg:h-[50%] lg:pr-0.5 py-1' alt="Manali" />
+                <img src={shimla} className='lg:w-[50%] lg:h-[50%] lg:pl-0.5 py-1' alt="Shimla" />
             </div>
             <div className='flex lg:flex-row max-sm:flex-col justify-evenly'>
                 <img src={cycletrack1} className='lg:w-[33%] lg:h-[33%] lg:pr-1 py-1' alt="Cycling Track" />
@@ -33,7 +33,7 @@ function HomePage() {
             </div>
             <div className='flex lg:flex-row max-sm:flex-col'>
                 <img src={bonfire} className='lg:w-[50%] lg:h-[50%] lg:pr-1 py-1' alt="Bonfire" />
-                <img src={speaker} className='lg:w-[50%] lg:h-[915px] lg:pr-1 py-1' alt="Me speaking" />
+                <img src={speaker} className='lg:w-[50%] lg:h-[915px] py-1' alt="Me speaking" />
             </div>
             <div className='flex lg:flex-row max-sm:flex-col'>
                 <img src={bball} className='lg:w-[50%] lg:h-[50%] lg:pr-1 py-1' alt="Basketball" />
