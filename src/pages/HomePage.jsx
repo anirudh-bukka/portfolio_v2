@@ -26,10 +26,10 @@ function HomePage() {
                 <img src={manali} className='lg:w-[50%] lg:h-[50%] lg:pr-0.5 py-1' alt="Manali" />
                 <img src={shimla} className='lg:w-[50%] lg:h-[50%] lg:pl-0.5 py-1' alt="Shimla" />
             </div>
-            <div className='flex lg:flex-row max-sm:flex-col justify-evenly'>
-                <img src={cycletrack1} className='lg:w-[33%] lg:h-[33%] lg:pr-1 py-1' alt="Cycling Track" />
-                <img src={cycletrack2} className='lg:w-[33%] lg:h-[33%] py-1' alt="Cycling Track" />
-                <img src={warangalgate} className='lg:w-[33%] lg:h-[33%] lg:pl-1 py-1' alt="Warangal Gate Mock" />
+            <div className='flex lg:flex-row max-sm:flex-col justify-around'>
+                <img src={cycletrack1} className='lg:w-[33%] lg:h-[33%] lg:pr-0.5 py-0.5' alt="Cycling Track" />
+                <img src={cycletrack2} className='lg:w-[33%] lg:h-[33%] py-0.5' alt="Cycling Track" />
+                <img src={warangalgate} className='lg:w-[33%] lg:h-[33%] lg:pl-0.5 py-0.5' alt="Warangal Gate Mock" />
             </div>
             <div className='flex lg:flex-row max-sm:flex-col'>
                 <img src={bonfire} className='lg:w-[50%] lg:h-[50%] lg:pr-1 py-1' alt="Bonfire" />
@@ -37,9 +37,9 @@ function HomePage() {
             </div>
             <div className='flex lg:flex-row max-sm:flex-col'>
                 <img src={bball} className='lg:w-[50%] lg:h-[50%] lg:pr-1 py-1' alt="Basketball" />
-                <img src={stadium} className='lg:w-[50%] lg:h-[545px] lg:pr-1 py-1' alt="Cricket Stadium" />
+                <img src={stadium} className='lg:w-[50%] lg:h-[545px] py-1' alt="Cricket Stadium" />
             </div>
-            <img src={hungry} className='py-2' alt="Stay Hungry Stay Foolish" />
+            <img src={hungry} className='py-0.5' alt="Stay Hungry Stay Foolish" />
         </div>
     </div>
   )

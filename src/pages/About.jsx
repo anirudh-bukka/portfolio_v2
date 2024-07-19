@@ -1,16 +1,25 @@
 import React from 'react';
-import dpBackground from '../assets/pictures/svg0.svg';
 import Guitar from '../assets/icons/guitar.svg';
 import Keyboard from '../assets/icons/piano.svg';
 import Drums from '../assets/icons/drum.svg';
 import Instagram from '../assets/logos/instagram.svg';
 import Discord from '../assets/logos/discord.svg';
-import Facebook from '../assets/logos/facebook.svg';
 import Twitter from '../assets/logos/twitter.svg';
 import LinkedIn from '../assets/logos/linkedin.svg';
 import HeaderImg from '../assets/pictures/about-headerimg.png';
 import Efcct1 from '../assets/pictures/efcct1.png';
-import ExperienceCard from '../components/ExperienceCard.jsx'
+import ExperienceCard from '../components/ExperienceCard.jsx';
+
+import ReactLogo from '../assets/icons/react.svg';
+import MongoLogo from '../assets/icons/mongodb.svg';
+import JavaLogo from '../assets/icons/java.svg';
+import SpringBoot from '../assets/icons/springboot.svg';
+import DataAnalysis from '../assets/icons/data_analysis.svg';
+import Python from '../assets/icons/python.svg';
+import Git from '../assets/icons/git.svg';
+import MySQL from '../assets/icons/sql.svg';
+import Github from '../assets/icons/github.svg';
+
 
 import { Link } from 'react-router-dom';
 
@@ -42,6 +51,25 @@ function About() {
         <div className='flex flex-col mx-auto max-sm:w-[90%] lg:w-[60%]'>
           <div className='text-4xl p-3 my-4 mx-auto'>Experience</div>
             <ExperienceCard />
+        </div>
+        <hr className='max-sm:w-[90%] lg:w-[70%] mx-auto my-4' />
+
+        <div className='flex flex-col mx-auto max-sm:w-[90%] lg:w-[60%]'>
+          <div className='text-3xl p-3 my-4 mx-auto'>Skills</div>
+          <div className='flex lg:flex-row max-sm:flex-col mx-auto justify-around'>
+            <div className='flex max-sm:flex-row mx-auto'>
+              <img src={JavaLogo} alt="Java" className='lg:h-14 lg:w-14 p-2 max-sm:h-[50px] hover:bg-white hover:border-0 duration-200 hover:border-b-2 hover:border-black'/>
+              <img src={ReactLogo} alt="ReactJS" className='lg:h-14 lg:w-14 p-2 max-sm:h-[50px] hover:bg-white hover:border-0 duration-200 hover:border-b-2 hover:border-black'/>
+              <img src={MongoLogo} alt="MongoDB" className='lg:h-14 lg:w-14 p-2 max-sm:h-[50px] hover:bg-white hover:border-0 duration-200 hover:border-b-2 hover:border-black'/>
+              <img src={SpringBoot} alt="Spring Boot" className='lg:h-14 lg:w-14 p-2 max-sm:h-[50px] hover:bg-white hover:border-0 duration-200 hover:border-b-2 hover:border-black'/>
+            </div>
+            <div className='flex max-sm:flex-row'>
+              <img src={Python} alt="Python" className='lg:h-14 lg:w-14 p-2 max-sm:h-[50px] hover:bg-white hover:border-0 duration-200 hover:border-b-2 hover:border-black'/>
+              <img src={DataAnalysis} alt="Data Analysis" className='lg:h-14 lg:w-14 p-2 max-sm:h-[50px] hover:bg-white hover:border-0 duration-200 hover:border-b-2 hover:border-black'/>
+              <img src={Git} alt="Git" className='lg:h-14 lg:w-14 p-2 max-sm:h-[50px] hover:bg-white hover:border-0 duration-200 hover:border-b-2 hover:border-black'/>
+              <img src={MySQL} alt="MySQL" className='lg:h-14 lg:w-14 p-2 max-sm:h-[50px] hover:bg-white hover:border-0 duration-200 hover:border-b-2 hover:border-black'/>
+            </div>
+          </div>
         </div>
         <hr className='max-sm:w-[90%] lg:w-[70%] mx-auto my-4' />
 
