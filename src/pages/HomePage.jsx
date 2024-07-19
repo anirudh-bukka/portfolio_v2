@@ -18,7 +18,7 @@ import bball from '../assets/pictures/basketball1.jpeg';
 function HomePage() {
   return (
     <div className='mt-2 flex flex-col max-sm:w-[90%] lg:w-full mx-auto'>
-        <p className='lg:text-6xl lg:ml-64 lg:py-8 lg:w-[50%] max-sm:text-3xl'>Hi, I'm a software engineer and have a passion for music, basketball and photography.</p>
+        <p className='lg:text-6xl lg:ml-64 lg:py-8 lg:w-[50%] max-sm:text-3xl'>Hi, I'm a software engineer and have a passion for music and basketball.</p>
         <p className='lg:text-3xl lg:ml-64 mb-8 pl-1'><i>Inspired by big dreams and dank memes.</i></p>
         <div className='flex flex-col justify-evenly'>
             <img src={room1} className='py-1' alt="Room" />
