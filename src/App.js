@@ -7,8 +7,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 import { Route, Routes } from "react-router-dom";
-import { useState, useEffect } from "react";
-import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader';
+// import { useState, useEffect } from "react";
+// import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader';
 
 function App() {
 

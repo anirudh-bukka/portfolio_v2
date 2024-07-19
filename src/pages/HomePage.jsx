@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 // import "react-vertical-timeline-component/style.min.css";
 import room1 from '../assets/pictures/room1.jpg';
 import manali from '../assets/pictures/manali1.jpg';
 import shimla from '../assets/pictures/shimla1.jpg';
 import bonfire from '../assets/pictures/bonfire1.jpg';
-import diwali from '../assets/pictures/diwali1.jpeg';
+// import diwali from '../assets/pictures/diwali1.jpeg';
 import speaker from '../assets/pictures/speaker1.jpg';
 import stadium from '../assets/pictures/cricket-stadium1.jpg';
 import cycletrack1 from '../assets/pictures/cycletrack1.jpg';
