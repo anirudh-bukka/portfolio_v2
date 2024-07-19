@@ -48,7 +48,7 @@ function About() {
         <div className='my-8 flex flex-col lg:flex-row max-sm:w-[90%] lg:w-[70%] mx-auto justify-around'>
           <div className='flex flex-col justify-between px-3 lg:w-[70%]'>
             <p className='text-xl mx-auto text-justify'>I co-founded a networking community in Discord, where people (mostly students) can come grow, have fun and share knowledge! <i>We are back to the drawing board to expand the purpose and experience and with one big suprise.</i></p>
-            <Link to="https://www.linkedin.com/company/efcctcommunity/" className='border border-black p-4 max-sm:my-2 text-center'>EFCCT</Link>
+            <Link to="https://www.linkedin.com/company/efcctcommunity/" className='border border-black p-4 max-sm:my-2 text-center hover:bg-black hover:text-white hover:duration-200'>EFCCT</Link>
           </div>
           <div>
             <img className='max-sm:my-2' src={Efcct1} alt="EFCCT" />
