@@ -58,14 +58,14 @@ function About() {
           <div className='text-3xl p-3 my-4 mx-auto'>Skills</div>
           <div className='flex lg:flex-row max-sm:flex-col mx-auto justify-around'>
             <div className='flex max-sm:flex-row mx-auto'>
-              <img src={JavaLogo} alt="Java" className='lg:h-14 lg:w-14 p-2 max-sm:h-[50px] hover:bg-white hover:border-0 duration-200 hover:border-b-2 hover:border-black'/>
+              <a href='https://drive.google.com/file/d/1iydC2CQjk_4TGZwwiffCFhMNzdsOH2Hf/view?usp=sharing'><img src={JavaLogo} alt="Java" className='lg:h-14 lg:w-14 p-2 max-sm:h-[50px] hover:bg-white hover:border-0 duration-200 hover:border-b-2 hover:border-black'/></a>
               <img src={ReactLogo} alt="ReactJS" className='lg:h-14 lg:w-14 p-2 max-sm:h-[50px] hover:bg-white hover:border-0 duration-200 hover:border-b-2 hover:border-black'/>
               <img src={MongoLogo} alt="MongoDB" className='lg:h-14 lg:w-14 p-2 max-sm:h-[50px] hover:bg-white hover:border-0 duration-200 hover:border-b-2 hover:border-black'/>
               <img src={SpringBoot} alt="Spring Boot" className='lg:h-14 lg:w-14 p-2 max-sm:h-[50px] hover:bg-white hover:border-0 duration-200 hover:border-b-2 hover:border-black'/>
             </div>
             <div className='flex max-sm:flex-row'>
-              <img src={Python} alt="Python" className='lg:h-14 lg:w-14 p-2 max-sm:h-[50px] hover:bg-white hover:border-0 duration-200 hover:border-b-2 hover:border-black'/>
-              <img src={DataAnalysis} alt="Data Analysis" className='lg:h-14 lg:w-14 p-2 max-sm:h-[50px] hover:bg-white hover:border-0 duration-200 hover:border-b-2 hover:border-black'/>
+              <a href='https://drive.google.com/drive/folders/1pmRPkG85NQH05NkqZPCe2a4ZojgP-JYV?usp=sharing'><img src={Python} alt="Python" className='lg:h-14 lg:w-14 p-2 max-sm:h-[50px] hover:bg-white hover:border-0 duration-200 hover:border-b-2 hover:border-black'/></a>
+              <a href='https://drive.google.com/drive/folders/1pmRPkG85NQH05NkqZPCe2a4ZojgP-JYV?usp=sharing'><img src={DataAnalysis} alt="Data Analysis" className='lg:h-14 lg:w-14 p-2 max-sm:h-[50px] hover:bg-white hover:border-0 duration-200 hover:border-b-2 hover:border-black'/></a>
               <img src={Git} alt="Git" className='lg:h-14 lg:w-14 p-2 max-sm:h-[50px] hover:bg-white hover:border-0 duration-200 hover:border-b-2 hover:border-black'/>
               <img src={MySQL} alt="MySQL" className='lg:h-14 lg:w-14 p-2 max-sm:h-[50px] hover:bg-white hover:border-0 duration-200 hover:border-b-2 hover:border-black'/>
             </div>
