@@ -29,8 +29,8 @@ function About() {
       <img src={HeaderImg} alt="Background" className=""/>
       <div className='flex flex-col justify-center p-2'>
         <div>
-          <p className='text-xl p-3 my-4 mx-auto text-justify max-sm:w-[90%] lg:w-[70%]'>I am currently a software engineer working on automation scripting for end-to-end feature implementation and enhancing overall quality of the application. I am a B.Tech graduate in Information Technology from Vallurupalli Nageswara Rao Vignana Jyothi Institute of Engineering & Technology, Hyderabad, India.
-  I am always open to network be it work or music. I have a deep interest in Data Science and Web Development and  try to contribute to open source projects. </p>
+          <p className='text-xl p-3 my-4 mx-auto text-justify max-sm:w-[90%] lg:w-[70%]'>I am currentlye working on automation scripting for end-to-end feature implementation and enhancing overall quality of the application. I am a B.Tech graduate in Information Technology from Vallurupalli Nageswara Rao Vignana Jyothi Institute of Engineering & Technology, Hyderabad, India.
+  I am always open to network, be it work or music. I have a deep interest in Data Science and Web Development and  try to contribute to open source projects. </p>
         </div>
 
         {/* <div className='flex flex-col mx-auto max-sm:w-[90%] lg:w-[70%] border-2'>
