@@ -8,7 +8,7 @@ function Footer() {
       <div className='my-auto font-sans text-2xl'>Anirudh</div>
       <div className='flex pt-2 flex-col justify-around text-center'>
           <div className='font-sans text-lg'>anirudh4dev@gmail.com</div>
-          <a className='font-sans text-lg' href='https://drive.google.com/file/d/1RkC3HWOec7pV6iO7NoHF1lM6xxOQSVh5/view?usp=sharing'>Resumé</a>
+          <a className='font-sans text-lg' href='https://drive.google.com/file/d/1Ir7K52OVyoJ9X35-FV_B0BhcIFUySKas/view?usp=sharing'>Resumé</a>
       </div>
     </div>
   )
