@@ -1,3 +1,4 @@
+import EightfoldLogo from '../assets/logos/eightfold-ai.png';
 import OracleLogo from '../assets/logos/oracle.png';
 import DynamatixLogo from '../assets/logos/dynamatix.jpeg';
 import OjasLogo from '../assets/logos/ojas.jpeg';
@@ -7,11 +8,23 @@ function InternshipCard() {
         <div>
 
             <div className=' flex flex-row my-4'>
+                <img src={OracleLogo} alt="EightfoldLogo" className='max-sm:w-[20%] lg:w-[10%] max-h-[80px]' />
+                <div className=' max-sm:w-[80%] lg:w-[90%] lg:ml-8'>
+                <div className=' flex flex-row justify-between'>
+                    <div className='font-bold text-xl'>Eightfold AI</div>
+                    <div className='text-end'>June'26 - Present</div>
+                </div>
+                <div className='my-1 font-bold'><i>Software Engineer 1 - AI Engineering</i></div>
+                <div className='text-justify'>Building an platform of AI agents for AI Interviews, Data Seeding and Career Coach Agents</div>
+                </div>
+            </div>
+            
+            <div className=' flex flex-row my-4'>
                 <img src={OracleLogo} alt="OracleLogo" className='max-sm:w-[20%] lg:w-[10%] max-h-[80px]' />
                 <div className=' max-sm:w-[80%] lg:w-[90%] lg:ml-8'>
                 <div className=' flex flex-row justify-between'>
                     <div className='font-bold text-xl'>Oracle</div>
-                    <div className='text-end'>August'24 - Present</div>
+                    <div className='text-end'>August'24 - June'26</div>
                 </div>
                 <div className='my-1 font-bold'><i>Associate Quality Analyst</i></div>
                 <div className='text-justify'>I am responsible for automating feature implementation of the application - Oracle Communications Unified Assurance. Involved automating UI functionality and command line functionality from the Linux based Virtual Machine. <br /><b>Skills:</b> Python, Shell scripting, Selenium, RobotFramework</div>
