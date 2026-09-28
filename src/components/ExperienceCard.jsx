@@ -14,8 +14,8 @@ function InternshipCard() {
                     <div className='font-bold text-xl'>Eightfold AI</div>
                     <div className='text-end'>June'26 - Present</div>
                 </div>
-                <div className='my-1 font-bold'><i>Software Engineer 1 - AI Engineering</i></div>
-                <div className='text-justify'>Building an platform of AI agents for AI Interviews, Data Seeding and Career Coach Agents</div>
+                <div className='my-1 font-bold'>SWE - AI Engineering</div>
+                <div className='text-justify'>Building an platform of AI agents for AI Interviews, Data Seeding and Career Coach Agents <br /><b>Skills:</b> Python, FastAPI, Knowledge Graph, Agent Orchestration</div>
                 </div>
             </div>
             
@@ -26,8 +26,8 @@ function InternshipCard() {
                     <div className='font-bold text-xl'>Oracle</div>
                     <div className='text-end'>August'24 - June'26</div>
                 </div>
-                <div className='my-1 font-bold'><i>Associate Quality Analyst</i></div>
-                <div className='text-justify'>I am responsible for automating feature implementation of the application - Oracle Communications Unified Assurance. Involved automating UI functionality and command line functionality from the Linux based Virtual Machine. <br /><b>Skills:</b> Python, Shell scripting, Selenium, RobotFramework</div>
+                <div className='my-1 font-bold'>Associate Quality Analyst</div>
+                <div className='text-justify'>I am responsible for automating feature implementation of the application - Oracle Communications Unified Assurance. Delivered AI Agents for generating test scenarios and automation test scripts in any test framework by just taking JIRA Epic/Zephyr ticket as the input. "Back in the day" XD: involved automating UI functionality and command line functionality from Linux based Virtual Machine. <br /><b>Skills:</b> Java, Python, Shell scripting, AI Agents, LangGraph, RAG, Selenium, RobotFramework</div>
                 </div>
             </div>
 
@@ -38,7 +38,7 @@ function InternshipCard() {
                     <div className='font-bold text-xl'>Oracle</div>
                     <div className='text-end'>January'24 - July'24</div>
                 </div>
-                <div className='my-1 font-bold'><i>Project Intern</i></div>
+                <div className='my-1 font-bold'>Project Intern</div>
                 <div className='text-justify'>I was responsible for automating feature implementation of the application - Oracle Communications Unified Assurance. Involved automating UI functionality and command line functionality from the Linux based Virtual Machine. <br /><b>Skills:</b> Python, Shell scripting, Selenium, RobotFramework</div>
                 </div>
             </div>
@@ -50,7 +50,7 @@ function InternshipCard() {
                     <div className='font-bold text-xl'>Dynamatix Analytics</div>
                     <div className='text-end'>June'23 - July'23</div>
                 </div>
-                <div className='my-1 font-bold'><i>Software Development Intern</i></div>
+                <div className='my-1 font-bold'>Software Development Intern</div>
                 <div className='text-justify'>Researched and worked on Dynamatix’s flagship platform - RiskHawk™️, where I developed and enhanced existing features of RiskHawk™️.<br /><b>Skills:</b> Java, MySQL</div>
                 </div>
             </div>
@@ -62,7 +62,7 @@ function InternshipCard() {
                     <div className='font-bold text-xl'>Ojas Innovative Technologies</div>
                     <div className='text-end'>May'22 - June'22</div>
                 </div>
-                <div className='my-1 font-bold'><i>Training Internship</i></div>
+                <div className='my-1 font-bold'>Summer Internship</div>
                 <div className='text-justify'>Trained under subject matter experts of Data Science and Machine Learning, and applied skills acquired in various of the company's datasets as projects and Proofs of Concept.</div>
                 </div>
             </div>
