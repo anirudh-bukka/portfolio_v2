@@ -1,10 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes, Link, useMatch, useResolvedPath } from 'react-router-dom';
-import HomePage from '../pages/HomePage';
-import Projects from '../pages/Projects';
-import About from '../pages/About';
-import Blog from '../pages/Blog';
-import Instagram from '../assets/logos/instagram.svg';
+import { Link } from 'react-router-dom';
 import Discord from '../assets/logos/discord.svg';
 import LinkedIn from '../assets/logos/linkedin.svg';
 import GitHub from '../assets/logos/github.svg';

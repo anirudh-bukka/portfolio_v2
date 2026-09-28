@@ -1,7 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import ProjectImage from '../assets/pictures/svg0.svg'
-import Github from '../assets/icons/github.svg';
-import Deployment from '../assets/icons/browser.svg';
+import React from 'react'
 import EnsembleLearningPreview1 from '../assets/pictures/ensemble_learning.png';
 import CapsNet from '../assets/pictures/capsnet.png';
 import CapsNet2 from '../assets/pictures/capsnet2.png';

@@ -1,7 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import BlogImage from '../assets/pictures/svg0.svg'
-import Github from '../assets/icons/github.svg';
-import Deployment from '../assets/icons/browser.svg';
+import React from 'react'
 import Blog1Preview from '../assets/pictures/blog1-preview.webp'
 
 function BlogPageComponent() {

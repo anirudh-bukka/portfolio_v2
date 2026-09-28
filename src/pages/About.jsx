@@ -18,7 +18,6 @@ import DataAnalysis from '../assets/icons/data_analysis.svg';
 import Python from '../assets/icons/python.svg';
 import Git from '../assets/icons/git.svg';
 import MySQL from '../assets/icons/sql.svg';
-import Github from '../assets/icons/github.svg';
 
 
 import { Link } from 'react-router-dom';

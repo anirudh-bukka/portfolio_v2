@@ -8,7 +8,7 @@ function InternshipCard() {
         <div>
 
             <div className=' flex flex-row my-4'>
-                <img src={OracleLogo} alt="EightfoldLogo" className='max-sm:w-[20%] lg:w-[10%] max-h-[80px]' />
+                <img src={EightfoldLogo} alt="Eightfold AI logo" className='max-sm:w-[20%] lg:w-[10%] max-h-[80px]' />
                 <div className=' max-sm:w-[80%] lg:w-[90%] lg:ml-8'>
                 <div className=' flex flex-row justify-between'>
                     <div className='font-bold text-xl'>Eightfold AI</div>
