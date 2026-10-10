@@ -9,22 +9,27 @@ import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
 // import { useState, useEffect } from "react";
 // import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader';
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis';
 
 function App() {
-
+  useLenis(({ scroll }) => {
+    // called every scroll
+  });
   return (
-    <div className="flex flex-col justify-between">
-      <Navbar className="h-full w-full" />
-      <div className="w-full">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
+    <ReactLenis root>
+      <div className="flex flex-col justify-between min-h-screen bg-white text-black selection:bg-black selection:text-white font-sans">
+        <Navbar className="h-full w-full" />
+        <div className="w-full flex-grow">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </div>
+        <Footer className="h-full w-full" />
       </div>
-      <Footer className="h-full w-full" />
-    </div>
+    </ReactLenis>
   );
 }
 

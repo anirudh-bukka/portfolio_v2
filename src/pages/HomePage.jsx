@@ -1,12 +1,10 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
-// import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
-// import "react-vertical-timeline-component/style.min.css";
+import { motion } from 'framer-motion';
+
 import room1 from '../assets/pictures/room1.jpg';
 import manali from '../assets/pictures/manali1.jpg';    
 import shimla from '../assets/pictures/shimla1.jpg';
 import bonfire from '../assets/pictures/bonfire1.jpg';
-// import diwali from '../assets/pictures/diwali1.jpeg';
 import speaker from '../assets/pictures/speaker1.jpg';
 import stadium from '../assets/pictures/cricket-stadium1.jpg';
 import cycletrack1 from '../assets/pictures/cycletrack1.jpg';
@@ -15,84 +13,72 @@ import warangalgate from '../assets/pictures/warangalgate1.jpg';
 import hungry from '../assets/pictures/hungry.jpeg';
 import bball from '../assets/pictures/basketball1.jpeg';
 
+const fadeIn = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+};
+
+const ImageCard = ({ src, alt, className }) => (
+  <motion.div
+    variants={fadeIn}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, margin: "-100px" }}
+    className={`overflow-hidden border-2 border-black ${className}`}
+  >
+    <motion.img 
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      src={src} 
+      alt={alt} 
+      className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" 
+    />
+  </motion.div>
+);
+
 function HomePage() {
   return (
-    <div className='mt-2 flex flex-col max-sm:w-[90%] lg:w-full mx-auto'>
-        <p className='lg:text-6xl lg:ml-64 lg:py-8 lg:w-[50%] max-sm:text-3xl'>Hi, I'm a software engineer and have a passion for music and basketball.</p>
-        <p className='lg:text-3xl lg:ml-64 mb-8 pl-1'><i>Inspired by big dreams and dank memes.</i></p>
-        <div className='flex flex-col justify-evenly'>
-            <img src={room1} className='py-1' alt="Room" />
-            <div className='flex lg:flex-row max-sm:flex-col'>
-                <img src={manali} className='lg:w-[50%] lg:h-[50%] lg:pr-0.5 py-1' alt="Manali" />
-                <img src={shimla} className='lg:w-[50%] lg:h-[50%] lg:pl-0.5 py-1' alt="Shimla" />
-            </div>
-            <div className='flex lg:flex-row max-sm:flex-col justify-around'>
-                <img src={cycletrack1} className='lg:w-[33%] lg:h-[33%] lg:pr-0.5 py-0.5' alt="Cycling Track" />
-                <img src={cycletrack2} className='lg:w-[33%] lg:h-[33%] py-0.5' alt="Cycling Track" />
-                <img src={warangalgate} className='lg:w-[33%] lg:h-[33%] lg:pl-0.5 py-0.5' alt="Warangal Gate Mock" />
-            </div>
-            <div className='flex lg:flex-row max-sm:flex-col'>
-                <img src={bonfire} className='lg:w-[50%] lg:h-[50%] lg:pr-1 py-1' alt="Bonfire" />
-                <img src={speaker} className='lg:w-[50%] lg:h-[915px] py-1' alt="Me speaking" />
-            </div>
-            <div className='flex lg:flex-row max-sm:flex-col'>
-                <img src={bball} className='lg:w-[50%] lg:h-[50%] lg:pr-1 py-1' alt="Basketball" />
-                <img src={stadium} className='lg:w-[50%] lg:h-[545px] py-1' alt="Cricket Stadium" />
-            </div>
-            <img src={hungry} className='py-0.5' alt="Stay Hungry Stay Foolish" />
+    <div className='mx-auto px-6 py-32'>
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="mb-32 grid grid-cols-1 md:grid-cols-12 gap-6"
+      >
+        <div className="md:col-span-12 lg:col-span-10">
+          <h1 className='text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter text-black mb-8 leading-[0.9] break-words'>
+            Software
+            <br />
+            Engineer.
+          </h1>
         </div>
+        <div className="md:col-span-8 lg:col-span-6 md:col-start-5 lg:col-start-7">
+          <p className='text-2xl md:text-4xl text-black font-bold uppercase tracking-tight leading-snug'>
+            I HAVE A PASSION FOR MUSIC AND BASKETBALL. INSPIRED BY BIG DREAMS AND DANK MEMES.
+          </p>
+        </div>
+      </motion.div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[400px]">
+        {/* Full width top image */}
+        <ImageCard src={room1} alt="Room" className="md:col-span-2 lg:col-span-3 row-span-2" />
+        
+        <ImageCard src={manali} alt="Manali" className="row-span-1" />
+        <ImageCard src={shimla} alt="Shimla" className="row-span-1" />
+        <ImageCard src={cycletrack1} alt="Cycling Track 1" className="row-span-1" />
+        
+        <ImageCard src={cycletrack2} alt="Cycling Track 2" className="row-span-1 md:col-span-2" />
+        <ImageCard src={warangalgate} alt="Warangal Gate Mock" className="row-span-2" />
+        
+        <ImageCard src={bonfire} alt="Bonfire" className="row-span-1" />
+        <ImageCard src={speaker} alt="Me speaking" className="row-span-2" />
+        <ImageCard src={stadium} alt="Cricket Stadium" className="row-span-2" />
+        <ImageCard src={bball} alt="Basketball" className="row-span-1" />
+        
+        <ImageCard src={hungry} alt="Stay Hungry Stay Foolish" className="md:col-span-2 lg:col-span-3 row-span-1" />
+      </div>
     </div>
   )
 }
 
 export default HomePage;
-
-/*
-
-<div class="relative p-5">
-                        <div class="mt-40">
-                            <div class="transition-all transform 
-                                translate-y-8 opacity-0 
-                                group-hover:opacity-100 
-                                group-hover:translate-y-0">
-                                <div class="p-2">
-                                    <p class="text-lg text-white">
-                                        Welcome to GeeksforGeeks.
-                                    </p>
-                                    <button class="px-4 py-2 text-sm 
-                                            text-white bg-green-600">
-                                        Visit site
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-<VerticalTimeline>
-                {timelineContent.map((element) => {
-                    let isWorkIcon = element.icon === "work";
-                    let showButton =
-                        element.buttonText !== undefined &&
-                        element.buttonText !== null &&
-                        element.buttonText !== "";
-
-                    return (
-                        <VerticalTimelineElement
-                            key={element.key}
-                            date={element.date}
-                            dateClassName="date"
-                            //  iconstyle={workIconStyles}
-                            //   icon={<WorkIcon />}
-                        >
-                            <h3 className="vertical-timeline-element-title">{element.title}</h3>
-                            <h5 className="vertical-timeline-element-subtitle">{element.location}</h5>
-                            <p id="description">{element.description}</p>
-                            {showButton && ( 
-                                <a className={`button ${isWorkIcon ? "workButton" : "schoolButton"}`} href="/">{element.buttonText}</a>
-                            )}
-                        </VerticalTimelineElement>
-                    );
-                })}
-            </VerticalTimeline>
-*/

@@ -1,177 +1,65 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Discord from '../assets/logos/discord.svg';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
 import LinkedIn from '../assets/logos/linkedin.svg';
 import GitHub from '../assets/logos/github.svg';
 
+export default function Navbar() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
-import { useState } from "react"; // import state
-
-export default function Header() {
-  const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
+  const toggleNav = () => setIsNavOpen(!isNavOpen);
 
   return (
-    <div className="lg:max-w-full p-1 mt-[1px] flex flex-row justify-between lg:max-h-32 lg:min-h-32 z-50 bg-white bg-opacity-90 sticky top-0">
-      <div className="lg:ml-64 lg:mt-8 lg:mb-8 h-max max-sm:m-4">
-        <Link to="/" className='font-sans text-3xl'>Anirudh</Link>
+    <nav className="fixed w-full z-50 bg-white border-b-2 border-black">
+      <div className="mx-auto px-6 h-20 flex items-center justify-between">
+        <Link to="/" className="text-3xl font-black tracking-tighter uppercase text-black">
+          Anirudh.
+        </Link>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center space-x-12">
+          <Link to="/projects" className="text-lg font-bold uppercase tracking-tight text-black hover:bg-black hover:text-white px-2 py-1 transition-colors">Projects</Link>
+          <Link to="/blog" className="text-lg font-bold uppercase tracking-tight text-black hover:bg-black hover:text-white px-2 py-1 transition-colors">Blog</Link>
+          <Link to="/about" className="text-lg font-bold uppercase tracking-tight text-black hover:bg-black hover:text-white px-2 py-1 transition-colors">About</Link>
+          <div className="h-6 w-0.5 bg-black mx-2" />
+          <a href="https://linkedin.com/in/anirudh-bukka/" target="_blank" rel="noreferrer" className="text-black hover:invert transition-colors">
+            <img src={LinkedIn} alt="LinkedIn" className="w-6 h-6" />
+          </a>
+          <a href="https://github.com/anirudh-bukka" target="_blank" rel="noreferrer" className="text-black hover:invert transition-colors">
+            <img src={GitHub} alt="GitHub" className="w-6 h-6" />
+          </a>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button className="md:hidden p-2 text-black border-2 border-black hover:bg-black hover:text-white transition-colors" onClick={toggleNav}>
+          {isNavOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
-      <div>
-        <section className="MOBILE-MENU flex lg:hidden max-sm:ml-32 h-max">
-          <div
-            className="HAMBURGER-ICON space-y-2 max-sm:m-4"
-            onClick={() => setIsNavOpen((prev) => !prev)} // toggle isNavOpen state on click
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isNavOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="md:hidden absolute top-20 left-0 w-full bg-white border-b-2 border-black flex flex-col overflow-hidden"
           >
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-          </div>
-
-          <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}> 
-            <div
-              className="CROSS-ICON absolute top-0 right-0 px-8 py-8"
-              onClick={() => setIsNavOpen(false)} // change isNavOpen state to false to close the menu
-            >
-              <svg
-                className="h-8 w-8 text-gray-600"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-              </svg>
+            <Link to="/projects" onClick={toggleNav} className="text-2xl font-bold uppercase tracking-tight text-black p-6 border-b-2 border-black hover:bg-black hover:text-white transition-colors">Projects</Link>
+            <Link to="/blog" onClick={toggleNav} className="text-2xl font-bold uppercase tracking-tight text-black p-6 border-b-2 border-black hover:bg-black hover:text-white transition-colors">Blog</Link>
+            <Link to="/about" onClick={toggleNav} className="text-2xl font-bold uppercase tracking-tight text-black p-6 border-b-2 border-black hover:bg-black hover:text-white transition-colors">About</Link>
+            <div className="flex space-x-8 p-6">
+              <a href="https://linkedin.com/in/anirudh-bukka/" target="_blank" rel="noreferrer">
+                <img src={LinkedIn} alt="LinkedIn" className="w-8 h-8" />
+              </a>
+              <a href="https://github.com/anirudh-bukka" target="_blank" rel="noreferrer">
+                <img src={GitHub} alt="GitHub" className="w-8 h-8" />
+              </a>
             </div>
-            <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
-              <li className="border-b border-gray-400 my-8 uppercase">
-                <Link to="/projects" className='font-sans text-lg'>Projects</Link>
-              </li>
-              <li className="border-b border-gray-400 my-8 uppercase">
-                <Link to="/blog" className='font-sans text-lg'>Blog</Link>
-              </li>
-              <li className="border-b border-gray-400 my-8 uppercase">
-                <Link to="about" className='font-sans text-lg'>About</Link>
-              </li>
-              <li className="border-b border-gray-400 my-8 uppercase">
-                <a href = 'https://www.linkedin.com/in/anirudh-bukka/'>LinkedIn</a>
-              </li>
-              <li className="border-b border-gray-400 my-8 uppercase">
-                <a href = 'https://discordapp.com/users/773880832405798942'>Discord</a>
-              </li>
-              <li className="border-b border-gray-400 my-8 uppercase">
-                <a href = 'https://github.com/anirudh-bukka'>GitHub</a>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <ul className="DESKTOP-MENU space-x-8 lg:w-[30%] lg:mr-48 lg:mt-10 lg:mb-10 h-max max-sm:hidden flex text-center lg:flex-row justify-between">
-        {/* <div className="lg:w-[30%] border-2 lg:mr-32 lg:mt-10 lg:mb-10 h-max max-sm:hidden flex text-center lg:flex-row justify-between"> */}
-          <Link to="/projects" className='font-sans text-lg hover:border-0 duration-200 hover:border-b-2 hover:border-black'>Projects</Link>
-          <Link to="/blog" className='font-sans text-lg hover:border-0 duration-200 hover:border-b-2 hover:border-black'>Blog</Link>
-          <Link to="about" className='font-sans text-lg hover:border-0 duration-200 hover:border-b-2 hover:border-black'>About</Link>
-          <a href = 'https://www.linkedin.com/in/anirudh-bukka/'><img src={LinkedIn} alt="LinkedIn" className="mx-[8px] p-0 lg:h-8 lg:w-8 hover:border-0 duration-200 hover:border-b-2 hover:border-black"/></a>
-          <a href = 'https://discordapp.com/users/773880832405798942'><img src={Discord} alt="Discord" className="mx-[10px] p-0 lg:h-8 lg:w-8 hover:border-0 duration-200 hover:border-b-2 hover:border-black"/></a>
-          <a href = 'https://github.com/anirudh-bukka'><img src={GitHub} alt="GitHub" className="mx-[10px] p-0 lg:h-8 lg:w-8 hover:border-0 duration-200 hover:border-b-2 hover:border-black"/></a>
-          {/* <a href = 'https://www.instagram.com/anidude09/'><img src={Instagram} alt="Instagram" className="mx-[10px] p-0 lg:h-8 lg:w-8"/></a> */}
-         {/* <Link to="about" className='bg-white hover:bg-[#23a094] hover:text-white lg:max-h-12 hover:outline-black p-2 rounded-lg hover:-translate-x-1 hover:-translate-y-1 duration-200 hover:border-r-4 hover:border-b-4 hover:border-black'>{<About />}</Link> */}
-        </ul>
-      </div>
-      <style>{`
-      .hideMenuNav {
-        display: none;
-      }
-      .showMenuNav {
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        background: white;
-        z-index: 10;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-      }
-    `}</style>
-    </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
   );
 }
-
-// function Navbar() {
-//   return (   
-//     <div className="border-b-2 lg:max-w-full p-1 mt-[1px] flex flex-row justify-between lg:max-h-32 lg:min-h-32 z-50 bg-white bg-opacity-90 sticky top-0">  
-      // <div className="border-2 lg:ml-32 lg:mt-8 lg:mb-8 h-max">
-      //   <Link to="/" className='font-sans text-5xl'>Anirudh</Link>
-      // </div>
-//       <div className="lg:w-[30%] border-2 lg:mr-32 lg:mt-10 lg:mb-10 h-max max-sm:hidden flex text-center lg:flex-row justify-between">
-//         <Link to="/projects" className='font-sans text-xl'>Projects</Link>
-//         <Link to="/blog" className='font-sans text-xl'>Blog</Link>
-//         <Link to="about" className='font-sans text-xl'>About</Link>
-//         {/* <Link to="about" className='bg-white hover:bg-[#23a094] hover:text-white lg:max-h-12 hover:outline-black p-2 rounded-lg hover:-translate-x-1 hover:-translate-y-1 duration-200 hover:border-r-4 hover:border-b-4 hover:border-black'>{<About />}</Link> */}
-//       </div>
-//       <section className="MOBILE-MENU flex lg:hidden">
-//           <div
-//             className="HAMBURGER-ICON space-y-2"
-//           >
-//             <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-//             <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-//             <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-//           </div>
-
-//           <div>
-//             <div
-//               className="absolute top-0 right-0 px-8 py-8"
-//             >
-//               <svg
-//                 className="h-8 w-8 text-gray-600"
-//                 viewBox="0 0 24 24"
-//                 fill="none"
-//                 stroke="currentColor"
-//                 strokeWidth="2"
-//                 strokeLinecap="round"
-//                 strokeLinejoin="round"
-//               >
-//                 <line x1="18" y1="6" x2="6" y2="18" />
-//                 <line x1="6" y1="6" x2="18" y2="18" />
-//               </svg>
-//             </div>
-//             <ul className="NAVIGATION-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
-//               <li className="border-b border-gray-400 my-8 uppercase">
-//                 <a href="/about">About</a>
-//               </li>
-//               <li className="border-b border-gray-400 my-8 uppercase">
-//                 <a href="/portfolio">Portfolio</a>
-//               </li>
-//               <li className="border-b border-gray-400 my-8 uppercase">
-//                 <a href="/contact">Contact</a>
-//               </li>
-//             </ul>
-//           </div>
-//         </section>
-      
-//         {/* <div className="flex flex-row justify-between lg:p-2">
-//             <button className='outline p-2 bg-black text-white hover:bg-cyan-400 hover:text-black rounded-lg hover:-translate-x-1 hover:-translate-y-1 duration-200 hover:border-r-4 hover:border-b-4 hover:border-black'>Dark Mode</button>
-//         </div> */}
-//     </div>
-//   )
-// }
-
-// // function CustomLink({ to, children, ...props }) {
-// //     const resolvedPath = useResolvedPath(to)
-// //     const isActive = useMatch({ path: resolvedPath.pathname, end: true })
-
-// //     return (
-// //         <li className={isActive ? "active" : ""}>
-// //             <Link to={to} {...props}>
-// //                 {children}
-// //             </Link>
-// //         </li>
-// //     )
-// // }
-
-// export default Navbar;
