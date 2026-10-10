@@ -4,10 +4,6 @@ import { motion } from 'framer-motion';
 import Guitar from '../assets/icons/guitar.svg';
 import Keyboard from '../assets/icons/piano.svg';
 import Drums from '../assets/icons/drum.svg';
-import Instagram from '../assets/logos/instagram.svg';
-import Discord from '../assets/logos/discord.svg';
-import Twitter from '../assets/logos/twitter.svg';
-import LinkedIn from '../assets/logos/linkedin.svg';
 import Efcct1 from '../assets/pictures/efcct1.png';
 import ExperienceCard from '../components/ExperienceCard.jsx';
 
